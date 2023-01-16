@@ -7,15 +7,13 @@
     <link href="data:image/x-icon;base64,{{ .Config.Icon }}" rel="icon" type="image/x-icon" />
     {{ if eq .Config.BootPath "" }}
       <!-- Bootstrap and theme -->
-      <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/{{ .Config.Theme }}/bootstrap.min.css" rel="stylesheet">
-      <!-- Font for icons -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+      <link href="/css/{{ .Config.Theme }}/bootstrap.min.css" rel="stylesheet">
     {{ else }}
-        <!-- Bootstrap and theme -->
-        <link href="/css/bootswatch/dist/{{ .Config.Theme }}/bootstrap.min.css" rel="stylesheet">
-        <!-- Font for icons -->
-        <link rel="stylesheet" href="/css/bootstrap-icons/font/bootstrap-icons.css">
+      <!-- Bootstrap and theme -->
+      <link href="/css/darkly/bootstrap.min.css" rel="stylesheet">
     {{ end }}
+    <!-- Font for icons -->
+    <link rel="stylesheet" href="/css/bootstrap-icons.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
